@@ -48,3 +48,47 @@ const gato = {
 
 console.log(gato.hasOwnProperty("nombre")) // output true
 console.log(gato.hasOwnProperty("salud")) // output false
+
+
+//---------------------------------------------------------------
+// Encadenamiento opcional o más conocido como OPTIONAL CHAINING
+// El operador de encadenamiento opcional ?. permite leer el valor de una propiedad ubicada dentro de una cadena de objetos conectados sin tener que validar expresamente que cada referencia en la cadena sea válida.
+
+const gato = {
+    nombre: "Valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+};
+// console.log(gato.otros.favoritos);
+console.log(gato.otros?.favoritos);
+
+
+//---------------------------------------------------------------
+// MÉTODOS
+
+//Método normal
+const gato = {
+    nombre: "Valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer: function () {
+        console.log("Ahora está comiendo");
+    },
+};
+
+gato.comer();
+
+////Método reducido
+const gato = {
+    nombre: "Valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer() {
+        console.log("Ahora está comiendo");
+    },
+};
+
+gato.comer();
