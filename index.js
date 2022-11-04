@@ -80,7 +80,7 @@ const gato = {
 
 gato.comer();
 
-////Método reducido
+//Método reducido
 const gato = {
     nombre: "Valiente",
     duerme: true,
@@ -92,3 +92,16 @@ const gato = {
 };
 
 gato.comer();
+
+nombre = 'levin'
+const gato = {
+    nombre: "Valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(comida) {
+        return `${this.nombre} está comiendo ${comida}`;
+    },
+};
+
+console.log(gato.comer("pez"));
